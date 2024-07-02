@@ -1,30 +1,25 @@
-/*
-13. Generar la función mistrcpy(str1,str2) que copia str2 en str1. No usar la funciones de String.h 
-*/
 #include <iostream>
-#include <stdio.h>
 #include <conio.h>
 using namespace std;
-void mistrcpy(char *str1, const char *str2) {
-    while(*str2) {
-        *str1 = *str2;
-        str1++;
-        str2++;
+
+void mistrcpy(char str1[], const char str2[]) {
+    int i = 0;
+    while(str2[i] != '\0') {
+        str1[i] = str2[i];
+        i++;
     }
-    *str1 = '\0';
+    str1[i] = '\0';
 }
 
 int main() {
     char str1[100]; 
     char str2[] = "Hola mundo";
     
-    
     mistrcpy(str1, str2);
     
-    cout<<"str1 es: "<<str1;
-    
+    cout << "str1 es: " << str1 << endl;
+    getch();
     return 0;
 }
-
 
 
