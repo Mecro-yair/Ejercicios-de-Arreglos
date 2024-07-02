@@ -2,41 +2,43 @@
 4. Leer una secuencia de nombres, ordenarlos alfabéticamente y presentarlos.
 */
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
-int main(){
+int main() {
 	int n;
-	int arreglo[20];
-	int i,j,aux;
 	
-	cout<<"PROGRAMA PARA ORDENAR ELEMNTOS DE ARREGLO" <<endl;
-	cout<<"ORDEN ASCENDENTE\n"<<endl;
+	string aux;
+	int i,j;
+
+	cout<<"PROGRAMA PARA ORDENAR NOMBRES DEL ARREGLO"<<endl;
+	cout<<"ORDEN ASCENDENTE"<<endl<<endl;
 	
-	do{
-		cout<<"Elementos del arreglo(max 20): ";
-		cin >>n;
-	}while(n<=0 || n>20);
-	
-	cout << "\nIngreso de los "<<n<<" elementos al arreglo "<<endl;
-	for(n=0;i<n;i++){
-		cout<<"Ingrese Elemento ("<<i+1<<"):";
+	do {
+		cout<<"Cantidad de nombres del arreglo : ";
+		cin>>n;
+		
+	} while (n<=0 ||n>20);
+	string arreglo[n];
+	for (i=0;i<n;i++) {
+		cout<<"Ingrese un Nombre ("<<i+1<<"): ";
 		cin>>arreglo[i];
 	}
 	
-	for (i=0;i<n-1;i++){
-		for(j=i+1;j<n;j++){
-			if (arreglo[i]>arreglo[j]){
+	for (i=0;i<n-1;i++) {
+		for (j=i+1;j<n;j++){
+			if (arreglo[i]>arreglo[j]) {
 				aux=arreglo[i];
-				arreglo[i]= arreglo[j];
-				arreglo[j] = aux;
+				arreglo[i]=arreglo[j];
+				arreglo[j]=aux;
 			}
 		}
 	}
-	cout<< "\n\nArreglo ya ordenado de forma ASCENDENTE" << endl;
-	for
-	 (i=0;i<n;i++){
-		cout<<"Elemento ("<<i+1<<") = "<<arreglo[i]<<endl;
+	
+	cout<<"\n\nLos Nombres ya ordenados de forma ASCENDENTE"<<endl;
+	for (i=0;i<n;i++) {
+		cout<<"Nombre ("<<i+1<<") = "<<arreglo[i]<<endl;
 	}
-	cout<<endl;
+	getch();
 	return 0;
-}     
+}   
