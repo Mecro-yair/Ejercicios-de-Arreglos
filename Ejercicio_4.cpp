@@ -18,7 +18,7 @@ int main() {
 		cout<<"Cantidad de nombres del arreglo : ";
 		cin>>n;
 		
-	} while (n<=0 ||n>20);
+	} while (n>0);
 	string arreglo[n];
 	for (i=0;i<n;i++) {
 		cout<<"Ingrese un Nombre ("<<i+1<<"): ";

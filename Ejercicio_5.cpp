@@ -10,10 +10,10 @@ int main() {
 	int n;
 	int aux;
 	int i,j,contMen,contMay;
-	do {
-		cout<<"Cantidad de numeros del arreglo : ";
-		cin>>n;	
-	} while (n<=0 ||n>20);
+
+	cout<<"Cantidad de numeros del arreglo : ";
+	cin>>n;	
+
 	
 	int arreglo[n];
 	
